@@ -12,7 +12,7 @@ $nomefile="https://www.meteospezia.com/rete/felettino.txt";
 $apro=fopen($nomefile,"r");
 $leggo=fread($apro,filesize($nomefile));
 fclose($apro);
-$arrparole=explode(" ",$leggo);
+$arrparole=explode("",$leggo);
 $data=$arrparole[0];
 $seconda=$arrparole[1];
 $temp=$arrparole[2];
