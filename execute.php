@@ -43,7 +43,7 @@ elseif($text=="/ricco del golfo")
 }
 elseif($text=="/mazzetta")
 {
-	$response = "alle $oraM la temperatura a Mazzetta  è di  $tempR °C";
+	$response = "alle $oraM la temperatura a Mazzetta  è di  $tempM °C";
 }
 else
 {
