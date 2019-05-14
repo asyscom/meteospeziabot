@@ -20,7 +20,7 @@ header("Content-Type: application/json");
 $response = '';
 if(strpos($text, "/start") === 0 || $text=="ciao")
 {
-	$response = "Ciao $firstname, benvenuto!";
+	$response = "Ciao $firstname, benvenuto nel bot della rete di osservazione di MeteoSpezia.com! Per conoscere in tempo reale le informazioni sulle singlole località clicca su / in basso a destra e scegli quella che ti interessa.";
 }
 elseif($text=="/riccodelgolfo")
 {
