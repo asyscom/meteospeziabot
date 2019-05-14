@@ -6,13 +6,7 @@ if(!$update)
   exit;
 }
 
-$data['reply_markup' => [
-    'inline_keyboard' => [
-        [['text' => 'Contact', 'callback_data' => 'mazzetta']],
-        [['text' => 'Review', 'callback_data' => 'ricco del golfo']],
-        $pagination['keyboard'],
-    ],
-];
+
 
 //felettino
 $felettino = file_get_contents('http://www.meteospezia.com/rete/felettino.txt');	
