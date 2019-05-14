@@ -85,6 +85,24 @@ elseif($text=="/ortonovo")
         $temp = $arrparole[2];
 	    $response = "alle $ora la temperatura al Ortonovo  è di  $temp °C";
 }
+elseif($text=="/portolotti")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/portolotti.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura al Portolotti è di  $temp °C";
+}
+elseif($text=="/sanbenedetto")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/sanbenedetto.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura a San Benedetto  è di  $temp °C";
+}
 else
 {
 	$response = "Comando non valido!";
