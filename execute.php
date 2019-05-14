@@ -24,7 +24,7 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 }
 elseif($text=="/riccodelgolfo")
 {
-	    $sito = file_get_contents('https://www.meteospezia.com/rete/felettino.txt'&parse_mode=markdown);
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/felettino.txt&parse_mode=markdown');
         $arrparole = explode(" ",$sito);
         $data = $arrparole[0];
 	$umid = $arrparole[3];
