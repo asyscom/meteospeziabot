@@ -24,7 +24,7 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 }
 elseif($text=="/riccodelgolfo")
 {
-	    $sito = file_get_contents('https://www.meteospezia.com/rete/felettino.txt');
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/felettino.txt'&parse_mode=markdown);
         $arrparole = explode(" ",$sito);
         $data = $arrparole[0];
 	$umid = $arrparole[3];
@@ -43,8 +43,8 @@ elseif($text=="/riccodelgolfo")
 	   $response = "*Ecco la situazione a Riccò del Golfo:*
 	        \n Temperatura: $temp °C
 		\n Umidità: $umid %
-                \n Temperatura massima: $tmax °C alle $tmaxora
-		\n Temperatura minima: $tmin °C alle $tminora
+                \n Temp. Max: $tmax °C alle $tmaxora
+		\n Temp. Min: $tmin °C alle $tminora
 		\n Vento: $velocitavento $unitavento $direzionevento
                 \n Pioggia odierna: $pioggia mm";
 }
