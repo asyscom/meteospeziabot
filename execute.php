@@ -5,19 +5,7 @@ if(!$update)
 {
   exit;
 }
-//felettino
-//$ricco = file_get_contents('http://www.meteospezia.com/rete/felettino.txt');
-//$mazzetta = file_get_contents('http://www.meteospezia.com/rete/mazzetta.txt');
-//$arrparole = explode(" ",$felettino);
-//$data = $arrparole[0];
-//$ora = $arrparole[1];
-//$temp = $arrparole[2];
-//mazzetta
-//$mazzetta = file_get_contents('http://www.meteospezia.com/rete/mazzetta.txt');	
-//$arrparole = explode(" ",$mazzetta);
-//$dataM = $arrparole[0];
-//$oraM = $arrparole[1];
-//$tempM = $arrparole[2];
+
 $message = isset($update['message']) ? $update['message'] : "";
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
 $chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -34,23 +22,23 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 {
 	$response = "Ciao $firstname, benvenuto!";
 }
-elseif($text=="/ricco del golfo")
+elseif($text=="Ricco del golfo")
 {
-	$ricco = file_get_contents('https://www.meteospezia.com/rete/felettino.txt');
-        $arrparole = explode(" ",$ricco);
+	$sito = file_get_contents('https://www.meteospezia.com/rete/felettino.txt');
+        $arrparole = explode(" ",$sito);
         $data = $arrparole[0];
         $ora = $arrparole[1];
         $temp = $arrparole[2];
-	$response = "Alle $ora la temperatura a Riccò del Golfo è di  $temp °C";
+	$response = "Alle $ora la temperatura a $text è di  $temp °C";
 }
-elseif($text=="mazzetta")
+elseif($text=="Mazzetta")
 {
-	$mazzetta = file_get_contents('https://www.meteospezia.com/rete/mazzetta.txt');
-        $arrparole = explode(" ",$mazzetta);
+	$sito= file_get_contents('https://www.meteospezia.com/rete/mazzetta.txt');
+        $arrparole = explode(" ",$sito);
         $data = $arrparole[0];
         $ora = $arrparole[1];
         $temp = $arrparole[2];
-	$response = "alle $ora la temperatura a Mazzetta  è di  $temp °C";
+	$response = "alle $ora la temperatura a $text  è di  $temp °C";
 }
 else
 {
