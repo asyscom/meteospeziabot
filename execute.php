@@ -20,7 +20,7 @@ function get_data($url) {
 //$ricco = fopen ("https://www.meteospezia.com/rete/felettino.txt", "w");
 
 //$nomefile = "https://www.meteospezia.com/rete/mazzetta.txt";
-$nomefile = get_data('https://www.meteospezia.com/rete/felettino.txt');	
+$nomefile = get_data('http://www.meteospezia.com/rete/felettino.txt');	
 //$nomefile = "mazzetta.txt";
 $apro = fopen($nomefile,"r");
 $leggo = fread($apro,filesize($nomefile));
