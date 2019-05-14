@@ -40,6 +40,15 @@ elseif($text=="/mazzetta")
         $temp = $arrparole[2];
 	    $response = "alle $ora la temperatura a Mazzetta  è di  $temp °C";
 }
+elseif($text=="/corniglia")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/corniglia.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura a Corniglia  è di  $temp °C";
+}
 else
 {
 	$response = "Comando non valido!";
