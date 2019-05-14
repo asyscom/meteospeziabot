@@ -29,7 +29,13 @@ elseif($text=="/riccodelgolfo")
         $data = $arrparole[0];
         $ora = $arrparole[1];
         $temp = $arrparole[2];
-	    $response = "Alle $ora la temperatura a Riccò del Golfo è di  $temp °C";
+	$tmax = $arrparole[27]
+	$tmin = $arrparole[29]
+	$tmaxora = $arrparole[28]
+	$tminora = $arrparole[30]
+	$vento = $arrparole[13]|$arrparole[14]|$arrparole[12]
+	$pioggia = $arrparole[10]	
+	    $response = "Alle $ora la temperatura a Riccò del Golfo è di  $temp °C, la temperatura massima è stata di $tmax °C alle $tmaxora, la temperatura minima è stata di $tmin °C alle $tminora, il vento è $vento mentra la pioggia caduta è di $pioggia mm";
 }
 elseif($text=="/mazzetta")
 {
