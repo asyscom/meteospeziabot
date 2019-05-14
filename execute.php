@@ -22,23 +22,130 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 {
 	$response = "Ciao $firstname, benvenuto!";
 }
-elseif($text=="Ricco del golfo")
+elseif($text=="/ricco del golfo")
 {
-	$sito = file_get_contents('https://www.meteospezia.com/rete/felettino.txt');
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/felettino.txt');
         $arrparole = explode(" ",$sito);
         $data = $arrparole[0];
         $ora = $arrparole[1];
         $temp = $arrparole[2];
-	$response = "Alle $ora la temperatura a $text è di  $temp °C";
+	    $response = "Alle $ora la temperatura a Riccò del Golfo è di  $temp °C";
 }
-elseif($text=="Mazzetta")
+elseif($text=="/mazzetta")
 {
-	$sito= file_get_contents('https://www.meteospezia.com/rete/mazzetta.txt');
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/mazzetta.txt');
         $arrparole = explode(" ",$sito);
         $data = $arrparole[0];
         $ora = $arrparole[1];
         $temp = $arrparole[2];
-	$response = "alle $ora la temperatura a $text  è di  $temp °C";
+	    $response = "alle $ora la temperatura a Mazzetta  è di  $temp °C";
+}
+elseif($text=="/corniglia")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/corniglia.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura a Corniglia  è di  $temp °C";
+}
+elseif($text=="/via fratelli rosselli")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/fratellirosselli.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura in Via Fratelli Rosselli  è di  $temp °C";
+}
+elseif($text=="/la lizza")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/lalizza.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura alla Lizza  è di  $temp °C";
+}
+elseif($text=="/levanto")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/levanto.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura a Levanto  è di  $temp °C";
+}
+elseif($text=="/ortonovo")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/ortonovo.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura al Ortonovo  è di  $temp °C";
+}
+elseif($text=="/portolotti")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/portolotti.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura al Portolotti è di  $temp °C";
+}
+elseif($text=="/sanbenedetto")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/sanbenedetto.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura a San Benedetto  è di  $temp °C";
+}
+elseif($text=="/sarzana")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/sarzana2.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura a Sarzana  è di  $temp °C";
+}
+elseif($text=="/serra")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/serra.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura alla Serra  è di  $temp °C";
+}
+elseif($text=="/valgraveglia")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/valgraveglia.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura in Valgraveglia è di  $temp °C";
+}
+elseif($text=="/varese")
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/varese.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura alla Lizza  è di  $temp °C";
+}
+elseif($text=="/via xx settembre")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/viaxxsett.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura in Via XX Settembre  è di  $temp °C";
 }
 else
 {
