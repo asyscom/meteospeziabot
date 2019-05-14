@@ -103,6 +103,24 @@ elseif($text=="/sanbenedetto")
         $temp = $arrparole[2];
 	    $response = "alle $ora la temperatura a San Benedetto  è di  $temp °C";
 }
+elseif($text=="/sarzana")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/sarzana2.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura a Sarzana  è di  $temp °C";
+}
+elseif($text=="/serra")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/serra.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura alla Serra  è di  $temp °C";
+}
 else
 {
 	$response = "Comando non valido!";
