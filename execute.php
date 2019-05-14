@@ -36,7 +36,7 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 }
 elseif($text=="/ricco del golfo")
 {
-	$ricco = file_get_contents('http://www.meteospezia.com/rete/felettino.txt');
+	$ricco = file_get_contents('https://www.meteospezia.com/rete/felettino.txt');
         $arrparole = explode(" ",$ricco);
         $data = $arrparole[0];
         $ora = $arrparole[1];
@@ -45,7 +45,12 @@ elseif($text=="/ricco del golfo")
 }
 elseif($text=="mazzetta")
 {
-	$response = "alle $oraM la temperatura a Mazzetta  è di  $tempM °C";
+	$mazzetta = file_get_contents('https://www.meteospezia.com/rete/mazzetta.txt');
+        $arrparole = explode(" ",$mazzetta);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2]
+	$response = "alle $ora la temperatura a Mazzetta  è di  $temp °C";
 }
 else
 {
