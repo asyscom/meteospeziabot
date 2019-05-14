@@ -6,10 +6,21 @@ if(!$update)
   exit;
 }
 
+function get_data($url) {
+	$ch = curl_init();
+	$timeout = 5;
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+	$data = curl_exec($ch);
+	curl_close($ch);
+	return $data;
+
 //$ricco = fopen ("https://www.meteospezia.com/rete/felettino.txt", "w");
 
-$donwload = file_get_contents("https://www.meteospezia.com/rete/mazzetta.txt");
-$nomefile = "mazzetta.txt";
+//$nomefile = "https://www.meteospezia.com/rete/mazzetta.txt";
+$nomefile = get_data('https://www.meteospezia.com/rete/felettino.txt');	
+//$nomefile = "mazzetta.txt";
 $apro = fopen($nomefile,"r");
 $leggo = fread($apro,filesize($nomefile));
 fclose($apro);
