@@ -130,14 +130,14 @@ elseif($text=="/valgraveglia")
         $temp = $arrparole[2];
 	    $response = "alle $ora la temperatura in Valgraveglia è di  $temp °C";
 }
-elseif($text=="/varese")
-	    $sito = file_get_contents('https://www.meteospezia.com/rete/varese.txt');
-        $arrparole = explode(" ",$sito);
-        $data = $arrparole[0];
-        $ora = $arrparole[1];
-        $temp = $arrparole[2];
-	    $response = "alle $ora la temperatura alla Lizza  è di  $temp °C";
-}
+//elseif($text=="/varese")
+//	    $sito = file_get_contents('https://www.meteospezia.com/rete/varese.txt');
+//        $arrparole = explode(" ",$sito);
+//        $data = $arrparole[0];
+//        $ora = $arrparole[1];
+//        $temp = $arrparole[2];
+//	    $response = "alle $ora la temperatura alla Lizza  è di  $temp °C";
+//}
 else
 {
 	$response = "Comando non valido!";
