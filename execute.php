@@ -22,7 +22,7 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 {
 	$response = "Ciao $firstname, benvenuto!";
 }
-elseif($text=="/ricco del golfo")
+elseif($text=="/riccodelgolfo")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/felettino.txt');
         $arrparole = explode(" ",$sito);
@@ -49,7 +49,7 @@ elseif($text=="/corniglia")
         $temp = $arrparole[2];
 	    $response = "alle $ora la temperatura a Corniglia  è di  $temp °C";
 }
-elseif($text=="/via fratelli rosselli")
+elseif($text=="/viafratellirosselli")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/fratellirosselli.txt');
         $arrparole = explode(" ",$sito);
@@ -58,7 +58,7 @@ elseif($text=="/via fratelli rosselli")
         $temp = $arrparole[2];
 	    $response = "alle $ora la temperatura in Via Fratelli Rosselli  è di  $temp °C";
 }
-elseif($text=="/la lizza")
+elseif($text=="/lalizza")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/lalizza.txt');
         $arrparole = explode(" ",$sito);
@@ -130,7 +130,7 @@ elseif($text=="/valgraveglia")
         $temp = $arrparole[2];
 	    $response = "alle $ora la temperatura in Valgraveglia è di  $temp °C";
 }
-elseif($text=="/via xx settembre")
+elseif($text=="/viaxxsettembre")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/viaxxsett.txt');
         $arrparole = explode(" ",$sito);
