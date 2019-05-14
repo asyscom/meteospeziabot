@@ -22,7 +22,7 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 {
 	$response = "Ciao $firstname, benvenuto!";
 }
-elseif($text=="/ricco del golfo")
+elseif($text=="ricco del golfo")
 {
 	$sito = file_get_contents('https://www.meteospezia.com/rete/felettino.txt');
         $arrparole = explode(" ",$sito);
@@ -31,7 +31,7 @@ elseif($text=="/ricco del golfo")
         $temp = $arrparole[2];
 	$response = "Alle $ora la temperatura a $text è di  $temp °C";
 }
-elseif($text=="/mazzetta")
+elseif($text=="mazzetta")
 {
 	$sito= file_get_contents('https://www.meteospezia.com/rete/mazzetta.txt');
         $arrparole = explode(" ",$sito);
