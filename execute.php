@@ -61,19 +61,19 @@ elseif($text=="/viafratellirosselli")
 elseif($text=="/lalizza")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/lalizza.txt');
-        $arrparole = explode(" ",$sito);
-        $data = $arrparole[0];
+        $arrparole = explode("\n",$sito);
+        $data = $arrparole[2];
         $ora = $arrparole[1];
-        $temp = $arrparole[2];
+        $temp = $arrparole[4];
 	    $response = "alle $ora la temperatura alla Lizza  è di  $temp °C";
 }
 elseif($text=="/levanto")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/levanto.txt');
-        $arrparole = explode(" ",$sito);
-        $data = $arrparole[0];
+        $arrparole = explode("\n",$sito);
+        $data = $arrparole[2];
         $ora = $arrparole[1];
-        $temp = $arrparole[2];
+        $temp = $arrparole[4];
 	    $response = "alle $ora la temperatura a Levanto  è di  $temp °C";
 }
 elseif($text=="/ortonovo")
@@ -88,28 +88,28 @@ elseif($text=="/ortonovo")
 elseif($text=="/portolotti")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/portolotti.txt');
-        $arrparole = explode(" ",$sito);
-        $data = $arrparole[0];
+        $arrparole = explode("\n",$sito);
+        $data = $arrparole[2];
         $ora = $arrparole[1];
-        $temp = $arrparole[2];
+        $temp = $arrparole[4];
 	    $response = "alle $ora la temperatura al Portolotti è di  $temp °C";
 }
 elseif($text=="/sanbenedetto")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/sanbenedetto.txt');
-        $arrparole = explode(" ",$sito);
-        $data = $arrparole[0];
+        $arrparole = explode("\n",$sito);
+        $data = $arrparole[2];
         $ora = $arrparole[1];
-        $temp = $arrparole[2];
+        $temp = $arrparole[4];
 	    $response = "alle $ora la temperatura a San Benedetto  è di  $temp °C";
 }
 elseif($text=="/sarzana")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/sarzana2.txt');
-        $arrparole = explode(" ",$sito);
-        $data = $arrparole[0];
+        $arrparole = explode("\n",$sito);
+        $data = $arrparole[2];
         $ora = $arrparole[1];
-        $temp = $arrparole[2];
+        $temp = $arrparole[4];
 	    $response = "alle $ora la temperatura a Sarzana  è di  $temp °C";
 }
 elseif($text=="/serra")
@@ -124,19 +124,19 @@ elseif($text=="/serra")
 elseif($text=="/valgraveglia")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/valgraveglia.txt');
-        $arrparole = explode(" ",$sito);
-        $data = $arrparole[0];
+        $arrparole = explode("\n",$sito);
+        $data = $arrparole[2];
         $ora = $arrparole[1];
-        $temp = $arrparole[2];
+        $temp = $arrparole[4];
 	    $response = "alle $ora la temperatura in Valgraveglia è di  $temp °C";
 }
 elseif($text=="/viaxxsettembre")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/viaxxsett.txt');
-        $arrparole = explode(" ",$sito);
-        $data = $arrparole[0];
+        $arrparole = explode("\n",$sito);
+        $data = $arrparole[2];
         $ora = $arrparole[1];
-        $temp = $arrparole[2];
+        $temp = $arrparole[4];
 	    $response = "alle $ora la temperatura in Via XX Settembre  è di  $temp °C";
 }
 elseif($text=="/varese")
