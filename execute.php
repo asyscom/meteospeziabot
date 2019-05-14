@@ -5,7 +5,8 @@ if(!$update)
 {
   exit;
 }
-$ricco = “https://www.meteospezia.com/rete/felettino.txt";
+//ricco = “https://www.meteospezia.com/rete/felettino.txt";
+$ricco = "file";
 $gestione = fopen($ricco, “w”);
 
 $message = isset($update['message']) ? $update['message'] : "";
