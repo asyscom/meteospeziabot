@@ -101,9 +101,24 @@ elseif($text=="/viafratellirosselli")
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/fratellirosselli.txt');
         $arrparole = explode("\n",$sito);
         $data = $arrparole[2];
+	$umid = $arrparole[3];
         $ora = $arrparole[1];
         $temp = $arrparole[4];
-	    $response = "alle $ora la temperatura in Via Fratelli Rosselli  è di  $temp °C";
+	$tmax = $arrparole[5];
+	$tmin = $arrparole[7];
+	$tmaxora = $arrparole[6];
+	$tminora = $arrparole[8];
+	$velocitavento = $arrparole[34];
+	$unitavento = km/h;
+	$direzionevento = $arrparole[35];
+	$pioggia = $arrparole[40];
+	    $response = "Ecco la situazione in Via Fratelli Rosselli:
+	        \n Temperatura: $temp °C
+		\n Umidità: $umid %
+                \n Temp. Max: $tmax °C alle $tmaxora
+		\n Temp. Min: $tmin °C alle $tminora
+		\n Vento: $velocitavento $unitavento $direzionevento
+                \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/lalizza")
 {
