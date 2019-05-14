@@ -8,7 +8,8 @@ if(!$update)
 
 //$ricco = fopen ("https://www.meteospezia.com/rete/felettino.txt", "w");
 
-$nomefile = "https://www.meteospezia.com/rete/felettino.txt";
+//$nomefile = "https://www.meteospezia.com/rete/felettino.txt";
+$nomefile = "felettino.txt";
 $apro = fopen($nomefile,"r");
 $leggo = fread($apro,filesize($nomefile));
 fclose($apro);
