@@ -53,18 +53,48 @@ elseif($text=="/mazzetta")
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/mazzetta.txt');
         $arrparole = explode(" ",$sito);
         $data = $arrparole[0];
+	$umid = $arrparole[3];
         $ora = $arrparole[1];
         $temp = $arrparole[2];
-	    $response = "alle $ora la temperatura a Mazzetta  è di  $temp °C";
+	$tmax = $arrparole[26];
+	$tmin = $arrparole[28];
+	$tmaxora = $arrparole[27];
+	$tminora = $arrparole[29];
+	$velocitavento = $arrparole[12];
+	$unitavento = $arrparole[13];
+	$direzionevento = $arrparole[11];
+	$pioggia = $arrparole[9];	
+	    $response = "Ecco la situazione a Mazzetta:
+	        \n Temperatura: $temp °C
+		\n Umidità: $umid %
+                \n Temp. Max: $tmax °C alle $tmaxora
+		\n Temp. Min: $tmin °C alle $tminora
+		\n Vento: $velocitavento $unitavento $direzionevento
+                \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/corniglia")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/corniglia.txt');
         $arrparole = explode(" ",$sito);
         $data = $arrparole[0];
+	$umid = $arrparole[3];
         $ora = $arrparole[1];
         $temp = $arrparole[2];
-	    $response = "alle $ora la temperatura a Corniglia  è di  $temp °C";
+	$tmax = $arrparole[26];
+	$tmin = $arrparole[28];
+	$tmaxora = $arrparole[27];
+	$tminora = $arrparole[29];
+	$velocitavento = $arrparole[12];
+	$unitavento = $arrparole[13];
+	$direzionevento = $arrparole[11];
+	$pioggia = $arrparole[9];
+	    $response = "Ecco la situazione a Corniglia:
+	        \n Temperatura: $temp °C
+		\n Umidità: $umid %
+                \n Temp. Max: $tmax °C alle $tmaxora
+		\n Temp. Min: $tmin °C alle $tminora
+		\n Vento: $velocitavento $unitavento $direzionevento
+                \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/viafratellirosselli")
 {
@@ -97,10 +127,25 @@ elseif($text=="/ortonovo")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/ortonovo.txt');
         $arrparole = explode(" ",$sito);
-        $data = $arrparole[0];
+         $data = $arrparole[0];
+	$umid = $arrparole[3];
         $ora = $arrparole[1];
         $temp = $arrparole[2];
-	    $response = "alle $ora la temperatura al Ortonovo  è di  $temp °C";
+	$tmax = $arrparole[26];
+	$tmin = $arrparole[28];
+	$tmaxora = $arrparole[27];
+	$tminora = $arrparole[29];
+	$velocitavento = $arrparole[12];
+	$unitavento = $arrparole[13];
+	$direzionevento = $arrparole[11];
+	$pioggia = $arrparole[9];
+	    $response = "Ecco la situazione a Ortonovo:
+	        \n Temperatura: $temp °C
+		\n Umidità: $umid %
+                \n Temp. Max: $tmax °C alle $tmaxora
+		\n Temp. Min: $tmin °C alle $tminora
+		\n Vento: $velocitavento $unitavento $direzionevento
+                \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/portolotti")
 {
@@ -133,10 +178,25 @@ elseif($text=="/serra")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/serra.txt');
         $arrparole = explode(" ",$sito);
-        $data = $arrparole[0];
+         $data = $arrparole[0];
+	$umid = $arrparole[3];
         $ora = $arrparole[1];
         $temp = $arrparole[2];
-	    $response = "alle $ora la temperatura alla Serra  è di  $temp °C";
+	$tmax = $arrparole[26];
+	$tmin = $arrparole[28];
+	$tmaxora = $arrparole[27];
+	$tminora = $arrparole[29];
+	$velocitavento = $arrparole[12];
+	$unitavento = $arrparole[13];
+	$direzionevento = $arrparole[11];
+	$pioggia = $arrparole[9];
+	    $response = "Ecco la situazione alla Serra:
+	        \n Temperatura: $temp °C
+		\n Umidità: $umid %
+                \n Temp. Max: $tmax °C alle $tmaxora
+		\n Temp. Min: $tmin °C alle $tminora
+		\n Vento: $velocitavento $unitavento $direzionevento
+                \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/valgraveglia")
 {
@@ -160,10 +220,25 @@ elseif($text=="/varese")
 {	
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/varese.txt');
         $arrparole = explode(" ",$sito);
-        $data = $arrparole[0];
+         $data = $arrparole[0];
+	$umid = $arrparole[3];
         $ora = $arrparole[1];
         $temp = $arrparole[2];
-	    $response = "alle $ora la temperatura a Varese Ligure  è di  $temp °C";
+	$tmax = $arrparole[26];
+	$tmin = $arrparole[28];
+	$tmaxora = $arrparole[27];
+	$tminora = $arrparole[29];
+	$velocitavento = $arrparole[12];
+	$unitavento = $arrparole[13];
+	$direzionevento = $arrparole[11];
+	$pioggia = $arrparole[9];
+	    $response = "Ecco la situazione a Varese Ligure:
+	        \n Temperatura: $temp °C
+		\n Umidità: $umid %
+                \n Temp. Max: $tmax °C alle $tmaxora
+		\n Temp. Min: $tmin °C alle $tminora
+		\n Vento: $velocitavento $unitavento $direzionevento
+                \n Pioggia odierna: $pioggia mm";
 }
 else
 {
