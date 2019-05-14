@@ -67,6 +67,24 @@ elseif($text=="/la lizza")
         $temp = $arrparole[2];
 	    $response = "alle $ora la temperatura alla Lizza  è di  $temp °C";
 }
+elseif($text=="/levanto")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/levanto.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura a Levanto  è di  $temp °C";
+}
+elseif($text=="/ortonovo")
+{
+	    $sito = file_get_contents('https://www.meteospezia.com/rete/ortonovo.txt');
+        $arrparole = explode(" ",$sito);
+        $data = $arrparole[0];
+        $ora = $arrparole[1];
+        $temp = $arrparole[2];
+	    $response = "alle $ora la temperatura al Ortonovo  è di  $temp °C";
+}
 else
 {
 	$response = "Comando non valido!";
