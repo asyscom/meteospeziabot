@@ -125,18 +125,48 @@ elseif($text=="/lalizza")
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/lalizza.txt');
         $arrparole = explode("\n",$sito);
         $data = $arrparole[2];
+	$umid = $arrparole[16];
         $ora = $arrparole[1];
         $temp = $arrparole[4];
-	    $response = "alle $ora la temperatura alla Lizza  è di  $temp °C";
+	$tmax = $arrparole[5];
+	$tmin = $arrparole[7];
+	$tmaxora = $arrparole[6];
+	$tminora = $arrparole[8];
+	$velocitavento = $arrparole[34];
+	$unitavento = km/h;
+	$direzionevento = $arrparole[35];
+	$pioggia = $arrparole[40];
+	    $response = "Ecco la situazione alla Lizza:
+	        \n Temperatura: $temp °C
+		\n Umidità: $umid %
+                \n Temp. Max: $tmax °C alle $tmaxora
+		\n Temp. Min: $tmin °C alle $tminora
+		\n Vento: $velocitavento km/h $direzionevento
+                \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/levanto")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/levanto.txt');
         $arrparole = explode("\n",$sito);
         $data = $arrparole[2];
+	$umid = $arrparole[16];
         $ora = $arrparole[1];
         $temp = $arrparole[4];
-	    $response = "alle $ora la temperatura a Levanto  è di  $temp °C";
+	$tmax = $arrparole[5];
+	$tmin = $arrparole[7];
+	$tmaxora = $arrparole[6];
+	$tminora = $arrparole[8];
+	$velocitavento = $arrparole[34];
+	$unitavento = km/h;
+	$direzionevento = $arrparole[35];
+	$pioggia = $arrparole[40];
+	    $response = "Ecco la situazione Levanto:
+	        \n Temperatura: $temp °C
+		\n Umidità: $umid %
+                \n Temp. Max: $tmax °C alle $tmaxora
+		\n Temp. Min: $tmin °C alle $tminora
+		\n Vento: $velocitavento km/h $direzionevento
+                \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/ortonovo")
 {
@@ -167,27 +197,72 @@ elseif($text=="/portolotti")
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/portolotti.txt');
         $arrparole = explode("\n",$sito);
         $data = $arrparole[2];
+	$umid = $arrparole[16];
         $ora = $arrparole[1];
         $temp = $arrparole[4];
-	    $response = "alle $ora la temperatura al Portolotti è di  $temp °C";
+	$tmax = $arrparole[5];
+	$tmin = $arrparole[7];
+	$tmaxora = $arrparole[6];
+	$tminora = $arrparole[8];
+	$velocitavento = $arrparole[34];
+	$unitavento = km/h;
+	$direzionevento = $arrparole[35];
+	$pioggia = $arrparole[40];
+	    $response = "Ecco la situazione a Portolotti:
+	        \n Temperatura: $temp °C
+		\n Umidità: $umid %
+                \n Temp. Max: $tmax °C alle $tmaxora
+		\n Temp. Min: $tmin °C alle $tminora
+		\n Vento: $velocitavento km/h $direzionevento
+                \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/sanbenedetto")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/sanbenedetto.txt');
         $arrparole = explode("\n",$sito);
         $data = $arrparole[2];
+	$umid = $arrparole[16];
         $ora = $arrparole[1];
         $temp = $arrparole[4];
-	    $response = "alle $ora la temperatura a San Benedetto  è di  $temp °C";
+	$tmax = $arrparole[5];
+	$tmin = $arrparole[7];
+	$tmaxora = $arrparole[6];
+	$tminora = $arrparole[8];
+	$velocitavento = $arrparole[34];
+	$unitavento = km/h;
+	$direzionevento = $arrparole[35];
+	$pioggia = $arrparole[40];
+	    $response = "Ecco la situazione a Sanbenedetto:
+	        \n Temperatura: $temp °C
+		\n Umidità: $umid %
+                \n Temp. Max: $tmax °C alle $tmaxora
+		\n Temp. Min: $tmin °C alle $tminora
+		\n Vento: $velocitavento km/h $direzionevento
+                \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/sarzana")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/sarzana2.txt');
         $arrparole = explode("\n",$sito);
         $data = $arrparole[2];
+	$umid = $arrparole[16];
         $ora = $arrparole[1];
         $temp = $arrparole[4];
-	    $response = "alle $ora la temperatura a Sarzana  è di  $temp °C";
+	$tmax = $arrparole[5];
+	$tmin = $arrparole[7];
+	$tmaxora = $arrparole[6];
+	$tminora = $arrparole[8];
+	$velocitavento = $arrparole[34];
+	$unitavento = km/h;
+	$direzionevento = $arrparole[35];
+	$pioggia = $arrparole[40];
+	    $response = "Ecco la situazione a Sarzana:
+	        \n Temperatura: $temp °C
+		\n Umidità: $umid %
+                \n Temp. Max: $tmax °C alle $tmaxora
+		\n Temp. Min: $tmin °C alle $tminora
+		\n Vento: $velocitavento km/h $direzionevento
+                \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/serra")
 {
@@ -218,18 +293,48 @@ elseif($text=="/valgraveglia")
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/valgraveglia.txt');
         $arrparole = explode("\n",$sito);
         $data = $arrparole[2];
+	$umid = $arrparole[16];
         $ora = $arrparole[1];
         $temp = $arrparole[4];
-	    $response = "alle $ora la temperatura in Valgraveglia è di  $temp °C";
+	$tmax = $arrparole[5];
+	$tmin = $arrparole[7];
+	$tmaxora = $arrparole[6];
+	$tminora = $arrparole[8];
+	$velocitavento = $arrparole[34];
+	$unitavento = km/h;
+	$direzionevento = $arrparole[35];
+	$pioggia = $arrparole[40];
+	    $response = "Ecco la situazione in Val Graveglia:
+	        \n Temperatura: $temp °C
+		\n Umidità: $umid %
+                \n Temp. Max: $tmax °C alle $tmaxora
+		\n Temp. Min: $tmin °C alle $tminora
+		\n Vento: $velocitavento km/h $direzionevento
+                \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/viaxxsettembre")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/viaxxsett.txt');
         $arrparole = explode("\n",$sito);
         $data = $arrparole[2];
+	$umid = $arrparole[16];
         $ora = $arrparole[1];
         $temp = $arrparole[4];
-	    $response = "alle $ora la temperatura in Via XX Settembre  è di  $temp °C";
+	$tmax = $arrparole[5];
+	$tmin = $arrparole[7];
+	$tmaxora = $arrparole[6];
+	$tminora = $arrparole[8];
+	$velocitavento = $arrparole[34];
+	$unitavento = km/h;
+	$direzionevento = $arrparole[35];
+	$pioggia = $arrparole[40];
+	    $response = "Ecco la situazione in Via XX Settembre:
+	        \n Temperatura: $temp °C
+		\n Umidità: $umid %
+                \n Temp. Max: $tmax °C alle $tmaxora
+		\n Temp. Min: $tmin °C alle $tminora
+		\n Vento: $velocitavento km/h $direzionevento
+                \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/varese")
 {	
