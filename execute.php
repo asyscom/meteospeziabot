@@ -52,10 +52,10 @@ elseif($text=="/corniglia")
 elseif($text=="/viafratellirosselli")
 {
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/fratellirosselli.txt');
-        $arrparole = explode(" ",$sito);
-        $data = $arrparole[0];
+        $arrparole = explode("\n",$sito);
+        $data = $arrparole[2];
         $ora = $arrparole[1];
-        $temp = $arrparole[2];
+        $temp = $arrparole[4];
 	    $response = "alle $ora la temperatura in Via Fratelli Rosselli  è di  $temp °C";
 }
 elseif($text=="/lalizza")
