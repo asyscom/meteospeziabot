@@ -15,6 +15,7 @@ function get_data($url) {
 	$data = curl_exec($ch);
 	curl_close($ch);
 	return $data;
+	}
 
 //$ricco = fopen ("https://www.meteospezia.com/rete/felettino.txt", "w");
 
