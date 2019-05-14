@@ -37,8 +37,13 @@ elseif($text=="/riccodelgolfo")
 	$unitavento = $arrparole[13];
 	$direzionevento = $arrparole[11];
 	$pioggia = $arrparole[9];	
-	    $response = "Alle $ora la temperatura a Riccò del Golfo è di  $temp °C, \n la temperatura massima è stata di $tmax °C alle $tmaxora, \n la temperatura minima è stata di $tmin °C alle $tminora, il vento è $velocitavento $unitavento $direzionevento,  la pioggia caduta è di $pioggia mm";
-	//$response = "alle $ora la temperatura a Mazzetta  è di  $temp °C";	
+	    //$response = "Alle $ora la temperatura a Riccò del Golfo è di  $temp °C, \n la temperatura massima è stata di $tmax °C alle $tmaxora, \n la temperatura minima è stata di $tmin °C alle $tminora, il vento è $velocitavento $unitavento $direzionevento,  la pioggia caduta è di $pioggia mm";
+	
+	   $response = "Ecco la situazione a Riccò del Golfo è di  $temp °C
+                \n Temperatura massima: $tmax °C alle $tmaxora
+		\n Temperatura minima: $tmin °C alle $tminora
+		\n Vento: $velocitavento $unitavento $direzionevento
+                \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/mazzetta")
 {
