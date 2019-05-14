@@ -140,7 +140,7 @@ elseif($text=="/via xx settembre")
 	    $response = "alle $ora la temperatura in Via XX Settembre  è di  $temp °C";
 }
 elseif($text=="/varese")
-	
+{	
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/varese.txt');
         $arrparole = explode(" ",$sito);
         $data = $arrparole[0];
