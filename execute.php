@@ -6,7 +6,13 @@ if(!$update)
   exit;
 }
 
-
+$data['reply_markup' => [
+    'inline_keyboard' => [
+        [['text' => 'Contact', 'callback_data' => 'mazzetta']],
+        [['text' => 'Review', 'callback_data' => 'ricco del golfo']],
+        $pagination['keyboard'],
+    ],
+];
 
 //felettino
 $felettino = file_get_contents('http://www.meteospezia.com/rete/felettino.txt');	
@@ -37,11 +43,11 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 {
 	$response = "Ciao $firstname, benvenuto!";
 }
-elseif($text=="/ricco del golfo")
+elseif($text=="ricco del golfo")
 {
 	$response = "alle $oraR la temperatura a Riccò del Golfo  è di  $tempR °C";
 }
-elseif($text=="/mazzetta")
+elseif($text=="mazzetta")
 {
 	$response = "alle $oraM la temperatura a Mazzetta  è di  $tempM °C";
 }
