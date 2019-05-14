@@ -5,6 +5,9 @@ if(!$update)
 {
   exit;
 }
+$ricco = “https://www.meteospezia.com/rete/felettino.txt";
+$gestione = fopen($ricco, “w”);
+
 $message = isset($update['message']) ? $update['message'] : "";
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
 $chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -19,7 +22,7 @@ header("Content-Type: application/json");
 $response = '';
 if(strpos($text, "/start") === 0 || $text=="ciao")
 {
-	$response = "Ciao $firstname, benvenuto!";
+	$response = "Ciao $firstname, benvenuto! il file è questo $ricco";
 }
 elseif($text=="domanda 1")
 {
