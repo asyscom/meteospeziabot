@@ -8,20 +8,18 @@ if(!$update)
 
 
 
-//$ricco = fopen ("https://www.meteospezia.com/rete/felettino.txt", "w");
-
-//$nomefile = "https://www.meteospezia.com/rete/mazzetta.txt";
-$nomefile = file_get_contents('http://www.meteospezia.com/rete/felettino.txt');	
-//$nomefile = "mazzetta.txt";
-//$apro = fopen($nomefile,"r");
-//$leggo = fread($apro,filesize($nomefile));
-//fclose($apro);
+//felettino
+$felettino = file_get_contents('http://www.meteospezia.com/rete/felettino.txt');	
 $arrparole = explode(" ",$nomefile);
-$data = $arrparole[0];
-$ora = $arrparole[1];
-$temp = $arrparole[2];
-//$ricco = "file";
-//$gestione = fopen($ricco, “w”);
+$dataR = $arrparole[0];
+$oraR = $arrparole[1];
+$tempR = $arrparole[2];
+//mazzetta
+$nomefile = file_get_contents('http://www.meteospezia.com/rete/mazzetta.txt');	
+$arrparole = explode(" ",$nomefile);
+$dataM = $arrparole[0];
+$oraM = $arrparole[1];
+$tempM = $arrparole[2];
 
 $message = isset($update['message']) ? $update['message'] : "";
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
@@ -37,15 +35,15 @@ header("Content-Type: application/json");
 $response = '';
 if(strpos($text, "/start") === 0 || $text=="ciao")
 {
-	$response = "Ciao $firstname, benvenuto! alle $ora la temperatura a Riccò del Golfo  è di  $temp °C";
+	$response = "Ciao $firstname, benvenuto!";
 }
-elseif($text=="domanda 1")
+elseif($text=="/ricco del golfo")
 {
-	$response = "risposta 1";
+	$response = "alle $oraR la temperatura a Riccò del Golfo  è di  $tempR °C";
 }
-elseif($text=="domanda 2")
+elseif($text=="/mazzetta")
 {
-	$response = "risposta 2";
+	$response = "alle $oraM la temperatura a Mazzetta  è di  $tempR °C";
 }
 else
 {
