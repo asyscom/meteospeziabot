@@ -44,9 +44,29 @@ $parameters = array('chat_id' => $chatId, "text" => $text);
 // method è il metodo per l'invio di un messaggio (cfr. API di Telegram)
 $parameters["method"] = "sendMessage";
 // imposto la inline keyboard
-$keyboard = ['inline_keyboard' => [[['text' =>  'myText', 'callback_data' => 'myCallbackText']]]];
+$keyboard = ['inline_keyboard' => [[['text' =>  'mazzetta', 'callback_data' => 'myCallbackText']]]];
 $parameters["reply_markup"] = json_encode($keyboard, true);
+$response = '';
+if(strpos($text, "/start") === 0 || $text=="ciao")
+{
+	$response = "Ciao $firstname, benvenuto!";
+}
+elseif($text=="ricco del golfo")
+{
+	$response = "alle $oraR la temperatura a Riccò del Golfo  è di  $tempR °C";
+}
+elseif($text=="mazzetta")
+{
+	$response = "alle $oraM la temperatura a Mazzetta  è di  $tempM °C";
+}
+else
+{
+	$response = "Comando non valido!";
+}
+$parameters = array('chat_id' => $chatId, "text" => $response);
+$parameters["method"] = "sendMessage";
 // converto e stampo l'array JSON sulla response
 echo json_encode($parameters);
+
 
 
