@@ -15,7 +15,7 @@ $leggo = fread($apro,filesize($nomefile));
 fclose($apro);
 $arrparole = explode(" ",$leggo);
 $data = $arrparole[0];
-$seconda = $arrparole[1];
+$ora = $arrparole[1];
 $temp = $arrparole[2];
 //$ricco = "file";
 //$gestione = fopen($ricco, “w”);
@@ -34,7 +34,7 @@ header("Content-Type: application/json");
 $response = '';
 if(strpos($text, "/start") === 0 || $text=="ciao")
 {
-	$response = "Ciao $firstname, benvenuto! la temperatura a Riccò del Golfo  è $temp";
+	$response = "Ciao $firstname, benvenuto! alle $ora la temperatura a Riccò del Golfo  è di  $temp °C";
 }
 elseif($text=="domanda 1")
 {
