@@ -10,13 +10,13 @@ if(!$update)
 
 //felettino
 $felettino = file_get_contents('http://www.meteospezia.com/rete/felettino.txt');	
-$arrparole = explode(" ",$nomefile);
+$arrparole = explode(" ",$felettino);
 $dataR = $arrparole[0];
 $oraR = $arrparole[1];
 $tempR = $arrparole[2];
 //mazzetta
-$nomefile = file_get_contents('http://www.meteospezia.com/rete/mazzetta.txt');	
-$arrparole = explode(" ",$nomefile);
+$mazzetta = file_get_contents('http://www.meteospezia.com/rete/mazzetta.txt');	
+$arrparole = explode(" ",$mazzetta);
 $dataM = $arrparole[0];
 $oraM = $arrparole[1];
 $tempM = $arrparole[2];
