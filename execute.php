@@ -49,7 +49,7 @@ elseif($text=="mazzetta")
         $arrparole = explode(" ",$mazzetta);
         $data = $arrparole[0];
         $ora = $arrparole[1];
-        $temp = $arrparole[2]
+        $temp = $arrparole[2];
 	$response = "alle $ora la temperatura a Mazzetta  è di  $temp °C";
 }
 else
