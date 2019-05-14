@@ -6,13 +6,16 @@ if(!$update)
   exit;
 }
 
-foreach(file("https://www.meteospezia.com/rete/felettino.txt") as $riga){
-$presenza=explode(" ",$riga); // IL SEPARATORE E’ IL CARATTERE “|”
-$data=$presenza[‘0’];
-$temp=$presenza[‘2’];
-//echo "<br /><br />Signor: ".$dati_personali."<br />Presenza: ".$data_ora;
-}
-//$ricco = "https://www.meteospezia.com/rete/felettino.txt";
+//$ricco = fopen ("https://www.meteospezia.com/rete/felettino.txt", "w");
+
+$nomefile="https://www.meteospezia.com/rete/felettino.txt";
+$apro=fopen($nomefile,"r");
+$leggo=fread($apro,filesize($nomefile));
+fclose($apro);
+$arrparole=explode(" ",$leggo);
+$data=$arrparole[0];
+$seconda=$arrparole[1];
+$temp=$arrparole[2];
 //$ricco = "file";
 //$gestione = fopen($ricco, “w”);
 
