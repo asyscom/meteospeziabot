@@ -101,7 +101,7 @@ elseif($text=="/viafratellirosselli")
 	    $sito = file_get_contents('https://www.meteospezia.com/rete/fratellirosselli.txt');
         $arrparole = explode("\n",$sito);
         $data = $arrparole[2];
-	$umid = $arrparole[3];
+	$umid = $arrparole[16];
         $ora = $arrparole[1];
         $temp = $arrparole[4];
 	$tmax = $arrparole[5];
@@ -117,7 +117,7 @@ elseif($text=="/viafratellirosselli")
 		\n Umidità: $umid %
                 \n Temp. Max: $tmax °C alle $tmaxora
 		\n Temp. Min: $tmin °C alle $tminora
-		\n Vento: $velocitavento $unitavento $direzionevento
+		\n Vento: $velocitavento km/h $direzionevento
                 \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/lalizza")
