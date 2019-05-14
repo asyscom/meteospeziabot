@@ -36,7 +36,7 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 }
 elseif($text=="/ricco del golfo")
 {
-	$ricco = file_get_contents('http://www.meteospezia.com/rete/felettino.txt')
+	$ricco = file_get_contents('http://www.meteospezia.com/rete/felettino.txt');
         $arrparole = explode(" ",$ricco);
         $data = $arrparole[0];
         $ora = $arrparole[1];
