@@ -17,17 +17,6 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
 $text = strtolower($text);
 header("Content-Type: application/json");
-//Creaiamo una inlineKeyboard
- 
-   //We create an inlineKeyboard
- 
-   $inlineKB = '[{"text" : "Vai al sito", "url" : "https://www.meteospezia.com"},{"text" : "Donazioni", "url" : "https://paypal.me/DavideRagonesi"}]';
- 
-   //Richiamiamo la funzione sendMsg con due nuovi parametri: la tastiera e il suo tipo
- 
-   //Call the sendMsg function with the two new parameter: the keyboard and the type
- 
-   $out = sendMsg($botToken,$chatId,"Hello World!",$inlineKB,"inline");
 $response = '';
 if(strpos($text, "/start") === 0 || $text=="ciao")
 {
