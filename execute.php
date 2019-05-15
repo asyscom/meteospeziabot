@@ -17,6 +17,16 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
 $text = strtolower($text);
 header("Content-Type: application/json");
+$keyboard = [
+              'keyboard' => [['Button1'],['Button2']],
+              'resize_keyboard' => true,
+              'one_time_keyboard' => true,
+              'selective' => true
+            ];
+
+$keyboard = json_encode($keyboard, true);
+
+$sendto = API_URL."sendmessage?chat_id=".$chatID."&text=".$reply."&parse_mode=HTML&reply_markup=$keyboard";
 $response = '';
 if(strpos($text, "/start") === 0 || $text=="ciao")
 {
