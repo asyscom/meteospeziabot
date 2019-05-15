@@ -361,15 +361,22 @@ elseif($text=="/varese")
                 \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/prova")
-{	
-	$menu[] = array("/mazzetta");
-        $menu[] = array("VOCE TASTIERA 2", "VOCE TASTIERA 3");
-        $menu[] = array("VOCE TASTIERA 5");
-
-        $text = "Tastiera normale".
-        Nascondi tastiera: /nascondi";
-       sm($chatID, $text, $menu, '', false, false, false);
 }
+$menu[] = array(
+array(
+"text" => "mazzetta",
+"callback_data" => "/mazzetta"),
+array(
+"text" => "bvarese",
+"callback_data" => "/varese"),
+);
+$menu[] = array(
+array(
+"text" => "corniglia",
+"callback_data" => "/corniglia"),
+);
+sm($chatID, "Tastiera inline.", $menu, 'Markdown', false, false, true);
+{	
 else
 {
 	$response = "Comando non valido!";
