@@ -361,6 +361,7 @@ elseif($text=="/varese")
                 \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/prova")
+{	
 	$menu[] = array("/mazzetta");
         $menu[] = array("VOCE TASTIERA 2", "VOCE TASTIERA 3");
         $menu[] = array("VOCE TASTIERA 5");
@@ -368,7 +369,7 @@ elseif($text=="/prova")
         $text = "Tastiera normale".
         Nascondi tastiera: /nascondi";
        sm($chatID, $text, $menu, '', false, false, false);
-{
+}
 else
 {
 	$response = "Comando non valido!";
