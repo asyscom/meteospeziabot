@@ -17,13 +17,6 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
 $text = strtolower($text);
 header("Content-Type: application/json");
-$data['reply_markup' => [
-    'inline_keyboard' => [
-        [['text' => 'Mazzetta', 'callback_data' => '/mazzetta']],
-        [['text' => 'Ricco del golfo', 'callback_data' => '/riccodelgolfo']],
-        $pagination['keyboard'],
-    ],
-];
 $response = '';
 if(strpos($text, "/start") === 0 || $text=="ciao")
 {
