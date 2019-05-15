@@ -359,23 +359,6 @@ elseif($text=="/varese")
 		\n Temp. Min: $tmin °C alle $tminora
 		\n Vento: $velocitavento $unitavento $direzionevento
                 \n Pioggia odierna: $pioggia mm";
-}
-elseif($text=="/prova")
-{
-$menu[] = array(
-array(
-"text" => "mazzetta",
-"callback_data" => "/mazzetta"),
-array(
-"text" => "bvarese",
-"callback_data" => "/varese"),
-);
-$menu[] = array(
-array(
-"text" => "corniglia",
-"callback_data" => "/corniglia"),
-);
-sm($chatID, "Tastiera inline.", $menu, 'Markdown', false, false, true);
 }	
 else
 {
