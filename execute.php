@@ -361,7 +361,7 @@ elseif($text=="/varese")
                 \n Pioggia odierna: $pioggia mm";
 }
 elseif($text=="/prova")
-}
+{
 $menu[] = array(
 array(
 "text" => "mazzetta",
@@ -376,7 +376,7 @@ array(
 "callback_data" => "/corniglia"),
 );
 sm($chatID, "Tastiera inline.", $menu, 'Markdown', false, false, true);
-{	
+}	
 else
 {
 	$response = "Comando non valido!";
