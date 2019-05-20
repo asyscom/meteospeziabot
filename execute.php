@@ -57,7 +57,7 @@ elseif($text=="/riccodelgolfo")
 	    //$response = "Alle $ora la temperatura a Riccò del Golfo è di  $temp °C, \n la temperatura massima è stata di $tmax °C alle $tmaxora, \n la temperatura minima è stata di $tmin °C alle $tminora, il vento è $velocitavento $unitavento $direzionevento,  la pioggia caduta è di $pioggia mm";
 	
 	   $response = "Ecco la situazione a Riccò del Golfo:
-	        \n Temperatura: $temp °C $ghiaccio
+	        \n Temperatura: $temp °C
 		\n Umidità: $umid %
                 \n Temp. Max: $tmax °C alle $tmaxora
 		\n Temp. Min: $tmin °C alle $tminora
