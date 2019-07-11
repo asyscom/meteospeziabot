@@ -31,7 +31,7 @@ $sendto = API_URL."sendmessage?chat_id=".$chatID."&text=".$reply."&parse_mode=HT
 $response = '';
 if(strpos($text, "/start") === 0 || $text=="ciao")
 {
-	$response = "Ciao $firstname, benvenuto nel bot della rete di osservazione di MeteoSpezia.com! Per conoscere in tempo reale le informazioni sulle singlole località clicca su / in basso a destra e scegli quella che ti interessa.";
+	$response = "Ciao $firstname, benvenuto nel bot della rete di osservazione di MeteoSpezia.com! Per conoscere in tempo reale le informazioni sulle singole località clicca su / in basso a destra e scegli quella che ti interessa.";
 }
 elseif($text=="/riccodelgolfo")
 {
